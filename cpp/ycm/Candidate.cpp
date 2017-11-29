@@ -40,6 +40,11 @@ std::string GetWordBoundaryChars( const std::string &text ) {
     }
   }
 
+  // last character is a good word boundary
+  if (text.size() > 0) {
+      result.push_back( tolower( text[ text.size() - 1 ] ) );
+  }
+
   return result;
 }
 
