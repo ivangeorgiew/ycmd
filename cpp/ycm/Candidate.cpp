@@ -52,6 +52,11 @@ void Candidate::ComputeWordBoundaryChars() {
       word_boundary_chars_.push_back( character );
     }
   }
+
+  auto last_character_pos = characters.end() - 1;
+  const auto &last_character = *last_character_pos;
+
+  word_boundary_chars_.push_back( last_character );
 }
 
 
